@@ -1,5 +1,7 @@
-package com.example.pagination;
+package com.example.pagination.mvc;
 
+import com.example.pagination.entity.Product;
+import com.example.pagination.service.ProductService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,6 +1,6 @@
-package com.example.pagination;
+package com.example.pagination.handler;
 
-import lombok.RequiredArgsConstructor;
+import com.example.pagination.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.MediaType;
@@ -19,7 +19,7 @@ public class ProductHandler {
         this.productService = productService;
     }
 
-    Mono<ServerResponse> getProductsPage(ServerRequest serverRequest) {
+    public Mono<ServerResponse> getProductsPage(ServerRequest serverRequest) {
         PageRequest pageRequest = buildPageRequest(serverRequest);
         return productService
                 .getProducts(pageRequest)
@@ -29,7 +29,7 @@ public class ProductHandler {
                         .bodyValue(products));
     }
 
-    Mono<ServerResponse> getProductsFlux(ServerRequest serverRequest) {
+    public Mono<ServerResponse> getProductsFlux(ServerRequest serverRequest) {
         PageRequest pageRequest = buildPageRequest(serverRequest);
         return productService
                 .getProductsFlux(pageRequest)
@@ -40,7 +40,7 @@ public class ProductHandler {
                         .bodyValue(products));
     }
 
-    Mono<ServerResponse> getProductsTuple(ServerRequest serverRequest) {
+    public Mono<ServerResponse> getProductsTuple(ServerRequest serverRequest) {
         PageRequest pageRequest = buildPageRequest(serverRequest);
         return productService
                 .getProductsTuple(pageRequest)

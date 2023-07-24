@@ -1,4 +1,4 @@
-package com.example.pagination;
+package com.example.pagination.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

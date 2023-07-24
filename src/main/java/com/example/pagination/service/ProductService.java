@@ -1,5 +1,7 @@
-package com.example.pagination;
+package com.example.pagination.service;
 
+import com.example.pagination.entity.Product;
+import com.example.pagination.repository.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -43,4 +45,6 @@ public class ProductService {
                 .zipWith(productRepository.getTotalCount())
                 .doOnNext(product -> log.info("Product Received : {}", product));
     }
+
+
 }

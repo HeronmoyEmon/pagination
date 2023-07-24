@@ -1,6 +1,6 @@
-package com.example.pagination;
+package com.example.pagination.repository;
 
-import org.springframework.data.domain.PageRequest;
+import com.example.pagination.entity.Product;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.r2dbc.repository.Query;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;

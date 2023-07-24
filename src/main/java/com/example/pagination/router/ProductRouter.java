@@ -1,5 +1,6 @@
-package com.example.pagination;
+package com.example.pagination.router;
 
+import com.example.pagination.handler.ProductHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.server.RouterFunction;

@@ -14,7 +14,7 @@ public class ProductRouter {
     public RouterFunction<ServerResponse> porductRouterConfig(ProductHandler productHandler) {
         return RouterFunctions
                 .route()
-                .GET("/products", productHandler::getProductsPage)
+                .GET("/products-page", productHandler::getProductsPage)
                 .GET("/products-flux", productHandler::getProductsFlux)
                 .GET("/products-tuple", productHandler::getProductsTuple)
                 .build();

@@ -28,7 +28,7 @@ public class ProductController {
         return productService.getProducts(pageRequest);
     }
 
-    @GetMapping("/products-flux")
+    @GetMapping("/products-flux-c")
     public Flux<Product> getProductsFlux(@RequestParam("page") int page,
                                          @RequestParam("size") int size) {
         PageRequest pageRequest = PageRequest.of(page, size);
